@@ -65,7 +65,9 @@ select opt in "${options[@]}" "Quit"; do
     	sudo fuser -k /usr/src
     	sudo fuser -k /dev/sda1
     	sudo umount -f /dev/sda1
-    	;;
+    	
+    	read -p "Press [Enter] key to exit..."
+    	exit;;
 
     $(( ${#options[@]}+1 )) ) echo "Goodbye!"; break;;
     *) echo "Invalid option. Try another one.";continue;;
