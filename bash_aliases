@@ -10,3 +10,6 @@ alias src="sh ~/App/remount_src.sh"
 
 # Mount SDcard (ExFat)
 alias exfat="sudo mount.exfat-fuse /dev/mmcblk2p1 /mnt/exfat && xdg-open /mnt/exfat"
+
+# Python alias
+alias py="python3"
