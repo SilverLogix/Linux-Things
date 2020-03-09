@@ -1,4 +1,5 @@
-#Do not use yet
+#Do not use yet!!!
+#Using for an auto install script menu later!
 #Mar 08, 2020, 01:39:12
 
 sudo apt install 
