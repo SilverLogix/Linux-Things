@@ -7,6 +7,7 @@ sudo apt install
 preload
 ksystemlog
 exfat-fuse exfat-utils
+qdirstat
 
 sudo preload start
 
