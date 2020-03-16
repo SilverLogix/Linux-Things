@@ -21,8 +21,12 @@ sudo apt clean
 sudo apt autoremove
 
 
-# For compiling things!
-sudo apt-get install git build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex autoconf automake autotools-dev dkms libelf-dev libiberty-dev libpci-dev libudev-dev zlib1g-dev
+# For compiling things! My Complete All in One! 
+# WARNING OVER 1GB! 
+sudo apt-get install wget git build-essential cmake kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex autoconf automake autotools-dev dkms libelf-dev libiberty-dev libpci-dev libudev-dev zlib1g-dev intltool pkg-config python-dev libtool ccache doxygen software-properties-common libart-2.0-dev libaspell-dev libblas3 liblapack3 libboost-dev libboost-python-dev libcdr-dev libdouble-conversion-dev libgc-dev libgdl-3-dev libglib2.0-dev libgsl-dev libgtk-3-dev libgtkmm-3.0-dev libgtkspell3-3-dev libhunspell-dev libjemalloc-dev liblcms2-dev libmagick++-dev libpango1.0-dev libpng-dev libpoppler-glib-dev libpoppler-private-dev libpotrace-dev libreadline-dev librevenge-dev libsigc++-2.0-dev libsoup2.4-dev libvisio-dev libwpg-dev libxml-parser-perl libxml2-dev libxslt1-dev python-lxml zlib1g-dev
+
+
+
 
 
 
