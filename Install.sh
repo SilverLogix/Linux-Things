@@ -12,13 +12,14 @@ exfat-fuse exfat-utils	# For mounting exfat
 qdirstat				# Find things taking up space!
 midori					# Lightweight backup webrowser
 xterm					# Some things require this???
+bleachbit				# Good cleaning utility
 
 sudo preload start
 
 
 # WARNING Do not remove K3b! IT WILL BREAK SOUND!
 
-# Why would i want these
+# Why would i want these?
 sudo apt-get remove --purge qlipper
 sudo apt-get remove --purge libreo*
 
@@ -36,6 +37,7 @@ sudo apt-get install wget git build-essential cmake kernel-package fakeroot libn
 
 # Fix bugged grub countdown
 sudo sed -i "/recordfail_broken=/{s/1/0/}" /etc/grub.d/00_header
+
 
 # Launch things with high priority
 sudo nice -n -10 su <USERNAME> -c firefox
