@@ -1,0 +1,94 @@
+#!/bin/bash
+#Mar 26, 2020, 19:21:19
+
+title="MAC Changer for portal logins!"
+
+#Ch
+yourmac="99:99:99:99:99:99"
+
+
+echo -e "\033[1;31m"$title"\033[m"
+echo ""
+echo ""
+read -p "Press [Enter] key to start!"
+
+
+clear
+
+echo -e "\033[1;31m"$title"\033[m"
+echo ""
+echo ""
+
+	sudo service network-manager stop
+
+clear
+echo -e "\033[1;31m"$title"\033[m"
+echo ""
+echo ""
+echo "Disabling Network"
+echo ""
+
+	sleep 3
+	sudo ifconfig wlo1 down
+	
+echo "Changing to switch MAC"
+echo ""	
+
+	sleep 1
+	sudo macchanger --mac=$yourmac wlo1
+	sleep 1
+	sudo ifconfig wlo1 up
+	sudo service network-manager start
+
+echo ""
+echo "Reloading network"
+echo ""
+echo ""
+echo ""
+
+sleep 3
+
+echo ""
+echo "LOGIN TO PORTAL NOW!"
+echo ""
+read -p "Press [Enter] key to revert"
+
+clear
+
+echo -e "\033[1;31m"$title"\033[m"
+echo ""
+echo ""
+echo "Disabling network"
+echo ""
+
+	sudo service network-manager stop
+
+	sleep 3
+	sudo ifconfig wlo1 down
+	
+echo "Reverting MAC"
+echo ""	
+
+	sleep 1
+	sudo macchanger -p wlo1
+	sleep 1
+	sudo ifconfig wlo1 up
+	sudo service network-manager start
+	
+echo ""
+echo "Reloading network"
+echo ""
+echo ""
+echo ""
+
+	sleep 3
+
+echo ""
+echo "COMPLETE!"
+echo ""
+read -p "Press [Enter] key to exit"
+
+
+exit;;
+
+ 
