@@ -6,7 +6,7 @@ prompt="Pick an option:"
 options=("REmount SanDisk" "Unmount Sandisk" "Force Unmount(Danger!)")
 
 echo ""
-echo -e "\033[1;31m"$title"\033[m"
+echo -e "\033[1;31m""$title""\033[m"
 echo ""
 
 PS3="$prompt "
@@ -36,7 +36,7 @@ select opt in "${options[@]}" "Quit"; do
 		echo ""
 		echo "Dont forget to Unmount before you remove the USB"
 		echo ""
-		read -p "Press [Enter] key to exit..."
+		read -p -r "Press [Enter] key to exit..."
 
 		xdg-open /usr/src
 		exit;;
@@ -66,7 +66,7 @@ select opt in "${options[@]}" "Quit"; do
     	sudo fuser -k /dev/sda1
     	sudo umount -f /dev/sda1
     	
-    	read -p "Press [Enter] key to exit..."
+    	read -p -r "Press [Enter] key to exit..."
     	exit;;
 
     $(( ${#options[@]}+1 )) ) echo "Goodbye!"; break;;

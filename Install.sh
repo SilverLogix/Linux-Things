@@ -24,6 +24,33 @@ sudo apt-get remove --purge qlipper
 sudo apt-get remove --purge libreo*
 
 
+
+# Other optional apps / some not in repo
+lxmed		# Menu editor (get from git)
+redshift	# Like F.lux
+checkra1n	# Iphone jailbreak
+godot		# 2D/3D game engine
+pycharm		# Python IDE
+onboard		# On screen keyboard
+timeshift	# MUST HAVE backup thing
+minitube	# Youtube player
+q4wine
+inkscape	# Vector graphics drawing
+pinta		# Paint.net clone
+asperite	# Pixel editor
+opensnap	# Win10, windows snap to side
+cordless	# CLI discord
+horcrux		# Split files and hide them
+lazygit		# CLI git manager
+qr			# Create CLI QR transfer codes
+unrar		# For ARK to use .rar
+
+
+
+
+# //////////////////////////////////////////////////
+
+
 sudo apt clean
 sudo apt autoremove
 
