@@ -14,6 +14,17 @@ alias py="python3"
 # Trim file systems
 alias trim="sudo fstrim -a -v"
 
-# Discord for Terminal
-#alias discord=""
+# Battery check
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BATC"
 
+# Discord for Terminal
+alias discord="sh /home/faxanidu/App/cordless/cord.sh"
+
+# QR transfer
+alias qr="/home/faxanidu/App/qr/qr.py"
+
+# Run PyCharm
+alias pycharm="/home/faxanidu/App/pycharm-community-2019.3.4/bin/pycharm.sh"
+
+# Use LazyGIT
+alias lazygit="/home/faxanidu/App/lazygit/lazygit"
