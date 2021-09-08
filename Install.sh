@@ -3,6 +3,10 @@
 # Mar 08, 2020, 01:39:12
 
 
+# To install unsafe PPA errors use
+# sudo update --allow-insecure-repositories
+
+
 sudo apt install 
 
 preload					# Fast start, much wow
@@ -13,6 +17,7 @@ qdirstat				# Find things taking up space!
 midori					# Lightweight backup webrowser
 xterm					# Some things require this???
 bleachbit				# Good cleaning utility
+gitk					# git gui!
 
 sudo preload start
 

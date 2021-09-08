@@ -4,7 +4,7 @@
 title="MAC Changer for portal logins!"
 
 #Ch
-yourmac="99:99:99:99:99:99"
+yourmac="24:68:B0:70:FA:53"
 
 
 echo -e "\033[1;31m"$title"\033[m"
