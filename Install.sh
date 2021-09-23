@@ -18,6 +18,7 @@ midori					# Lightweight backup webrowser
 xterm					# Some things require this???
 bleachbit				# Good cleaning utility
 gitk					# git gui!
+indicator-cpufreq		# CPU Scaling 
 
 sudo preload start
 
