@@ -88,17 +88,18 @@ echo ""
 echo -e "	\033[1;31m"$title"""\033[1;34m"$board"\033[m" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo ""
 echo ""
+echo ""
 
 #
 
-start_spinner "   Getting esp-idf export..."
+start_spinner "ㅤGetting esp-idf export..."
 	cd esp-idf
 	source 'export.sh' > /dev/null 2>&1
 stop_spinner $?
 
 #
 
-start_spinner "   Getting micropython update..."
+start_spinner "ㅤGetting micropython update..."
 	cd ..
 	cd micropython
 	git pull > /dev/null 2>&1
@@ -106,7 +107,7 @@ stop_spinner $?
 
 #
 
-start_spinner "   Cleaning build space..."
+start_spinner "ㅤCleaning build space..."
 	cd ports/esp32
 	make clean > /dev/null 2>&1
 	make submodules > /dev/null 2>&1
@@ -114,15 +115,16 @@ stop_spinner $?
 
 #
 
-start_spinner '   Compiling firmware (takes awhile) ...'
-	make > /dev/null 2>&1
+start_spinner "ㅤCompiling firmware (takes awhile) ..."
+sleep 2
+	#make > /dev/null 2>&1
 	# make USER_C_MODULES= ~/st7789_mpy/st7789/micropython.cmake all > /dev/null 2>&1
 stop_spinner $?
 
 #
 
-start_spinner "   Uploading..."
-esptool.py -p /dev/ttyUSB0 -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build-GENERIC/bootloader/bootloader.bin 0x8000 build-GENERIC/partition_table/partition-table.bin 0x10000 build-GENERIC/micropython.bin
+start_spinner "ㅤUploading..."
+esptool.py -p /dev/ttyUSB0 -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build-GENERIC/bootloader/bootloader.bin 0x8000 build-GENERIC/partition_table/partition-table.bin 0x10000 build-GENERIC/micropython.bin > /dev/null 2>&1
 stop_spinner $?
 
 echo ""

@@ -25,6 +25,7 @@ sudo preload start
 
 # WARNING Do not remove K3b! IT WILL BREAK SOUND!
 
+
 # Why would i want these?
 sudo apt-get remove --purge qlipper
 sudo apt-get remove --purge libreo*
@@ -74,11 +75,16 @@ pyminifier
 # OTHER
 
 # Fix bugged grub countdown
+sudo nano /etc/default/grub
+add:	GRUB_RECORDFAIL_TIMEOUT=20
+sudo update-grub
+
+OR # WARNING
 sudo sed -i "/recordfail_broken=/{s/1/0/}" /etc/grub.d/00_header
 
 
-# Launch things with high priority
-sudo nice -n -10 su <USERNAME> -c firefox
 
+# Launch things with high priority
+sudo nice -n -10 su -c CMD_TO_RUN USERNAME	# re-nice process WITHOUT root privlages
 
 
