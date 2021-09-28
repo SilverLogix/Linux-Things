@@ -4,7 +4,14 @@
 title="MAC Changer for portal logins!"
 
 #Ch
-yourmac="24:68:B0:70:FA:53"
+yourmac="84:cc:a8:61:0a:21"
+
+    
+
+	ifconfig --version || sudo apt install net-tools macchanger -y
+	clear
+
+
 
 
 echo -e "\033[1;31m"$title"\033[m"
@@ -19,7 +26,8 @@ echo -e "\033[1;31m"$title"\033[m"
 echo ""
 echo ""
 
-	sudo service network-manager stop
+	sudo systemctl stop NetworkManager
+	sleep 1
 
 clear
 echo -e "\033[1;31m"$title"\033[m"
@@ -38,7 +46,7 @@ echo ""
 	sudo macchanger --mac=$yourmac wlo1
 	sleep 1
 	sudo ifconfig wlo1 up
-	sudo service network-manager start
+	sudo systemctl start NetworkManager
 
 echo ""
 echo "Reloading network"
@@ -61,10 +69,11 @@ echo ""
 echo "Disabling network"
 echo ""
 
-	sudo service network-manager stop
+	sudo systemctl stop NetworkManager
 
 	sleep 3
 	sudo ifconfig wlo1 down
+
 	
 echo "Reverting MAC"
 echo ""	
@@ -73,7 +82,8 @@ echo ""
 	sudo macchanger -p wlo1
 	sleep 1
 	sudo ifconfig wlo1 up
-	sudo service network-manager start
+	sleep 1
+	sudo systemctl start NetworkManager
 	
 echo ""
 echo "Reloading network"
