@@ -143,7 +143,7 @@ else
 	stop_spinner $?
 	
 	
-	start_spinner "ㅤInstalling idf modules..."
+	start_spinner "ㅤInstall idf modules..."
 	cd esp-idf/
 	./install.sh > /dev/null 2>&1
 	source export.sh > /dev/null 2>&1
@@ -154,12 +154,12 @@ else
 	cd micropython/
 	
 	
-	start_spinner "ㅤUpdate MicroPython submodules..."
+	start_spinner "ㅤInstall MicroPython submodules..."
 	git submodule update --init > /dev/null 2>&1
 	stop_spinner $?
 	
 	
-	start_spinner "ㅤMPY cross compile"
+	start_spinner "ㅤMPY cross compile setup"
 	cd mpy-cross/
 	make > /dev/null 2>&1
 	stop_spinner $?
