@@ -148,7 +148,7 @@ else
 	stop_spinner $?
 	
 	
-	start_spinner "ㅤInstall idf modules (slow!) ..."
+	start_spinner "ㅤInstall idf modules (slow!)..."
 	cd esp-idf/
 	./install.sh > /dev/null 2>&1
 	source export.sh > /dev/null 2>&1
@@ -159,7 +159,7 @@ else
 	cd micropython/
 	
 	
-	start_spinner "ㅤInstall MicroPython submodules (slow!) ..."
+	start_spinner "ㅤInstall MicroPython submodules (slow!)..."
 	git submodule update --init > /dev/null 2>&1
 	stop_spinner $?
 	

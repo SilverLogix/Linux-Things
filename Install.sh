@@ -54,6 +54,10 @@ unrar		# For ARK to use .rar
 
 
 
+inix
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+
+
 
 # //////////////////////////////////////////////////
 

@@ -23,8 +23,3 @@ alias discord="sh /home/faxanidu/App/cordless/cord.sh"
 # QR transfer
 alias qr="/home/faxanidu/App/qr/qr.py"
 
-# Run PyCharm
-alias pycharm="/home/faxanidu/App/pycharm-community-2019.3.4/bin/pycharm.sh"
-
-# Use LazyGIT
-alias lazygit="/home/faxanidu/App/lazygit/lazygit"
