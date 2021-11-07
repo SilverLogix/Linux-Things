@@ -23,3 +23,5 @@ alias discord="sh /home/faxanidu/App/cordless/cord.sh"
 # QR transfer
 alias qr="/home/faxanidu/App/qr/qr.py"
 
+# Auto export ESP-IDF
+alias esp="source /home/faxanidu/Git/esp/esp-idf/export.sh"
